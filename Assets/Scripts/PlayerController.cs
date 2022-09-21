@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection = new Vector3();
 
     public float shootCooldown = 0.3f;
+    public ParticleSystem FireEffect;
     public AudioClip FireSound;
 
     private void Awake() {
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
             Projectile projectile = projectileObject.GetComponent<Projectile>();
             projectile.Launch(2000);
+            FireEffect.Play();
             audioSource.PlayOneShot(FireSound);
         }
     }
