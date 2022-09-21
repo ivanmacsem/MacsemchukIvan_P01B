@@ -35,18 +35,18 @@ public class EnemyController : MonoBehaviour
         switch (basicMoveStage)
         {
             case 0:
-                moveDirection=Vector3.forward;
+                moveDirection=Vector3.back;
             break;
             case 1:
                 moveDirection=Vector3.left;
             break;
             case 2:
-                moveDirection=Vector3.back;
+                moveDirection=Vector3.forward;
             break;
             default:
                 moveDirection=Vector3.right;
             break;
         }
-        rb.velocity = new Vector3(moveDirection.x * moveSpd, moveDirection.y * moveSpd, 0);
+        rb.velocity = new Vector3(moveDirection.x * moveSpd, 0, moveDirection.z * moveSpd);
     }
 }

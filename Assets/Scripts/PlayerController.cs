@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        rb.velocity = new Vector3(moveDirection.x * moveSpd, moveDirection.y * moveSpd, 0);
+        rb.velocity = new Vector3(moveDirection.x * moveSpd, 0, moveDirection.z * moveSpd);
     }
 
     private void Fire(InputAction.CallbackContext context) {
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector3.right * 2f, Quaternion.identity);
 
             Projectile projectile = projectileObject.GetComponent<Projectile>();
-            projectile.Launch(300);
+            projectile.Launch(2000);
         }
     }
 
