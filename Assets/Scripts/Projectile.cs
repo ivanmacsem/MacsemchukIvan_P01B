@@ -30,6 +30,7 @@ public class Projectile : MonoBehaviour
         if (e != null)
         {
             Debug.Log("Enemy Hit!");
+            e.TakeDamage(10);
         }
         Destroy(gameObject);
     }

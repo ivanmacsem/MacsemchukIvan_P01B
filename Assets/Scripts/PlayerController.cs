@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
     public float moveSpd = 6f;
+
+    public float health = 100f;
     public InputActions playerControls;
     private InputAction move;
     private InputAction fire;
@@ -69,6 +71,13 @@ public class PlayerController : MonoBehaviour
             timer -= Time.deltaTime;
         }
         canCast = true;
+    }
+
+    public void TakeDamage(float dmg){
+        health -= dmg;
+        if(health == 0){
+            gameObject.SetActive(false);
+        }
     }
 }
 

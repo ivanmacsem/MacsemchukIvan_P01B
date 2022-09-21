@@ -41753,8 +41753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  moveSpd: 6
+  health: 100
+  stage1Spd: 6
+  stage2Spd: 15
   curTime: 0
+  pointPicked: {x: 0, y: 0, z: 0}
 --- !u!65 &1840420929
 BoxCollider:
   m_ObjectHideFlags: 0
