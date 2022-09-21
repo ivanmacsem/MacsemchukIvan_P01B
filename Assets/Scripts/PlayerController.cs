@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
+
+    private AudioSource audioSource;
     public float moveSpd = 6f;
 
     public float health = 100f;
@@ -13,12 +16,16 @@ public class PlayerController : MonoBehaviour
     private InputAction move;
     private InputAction fire;
 
+    private InputAction reset;
+    private InputAction exit;
+
     public GameObject projectilePrefab;
 
     private bool canCast=true;
     Vector3 moveDirection = new Vector3();
 
     public float shootCooldown = 0.3f;
+    public AudioClip FireSound;
 
     private void Awake() {
         playerControls = new InputActions();
@@ -31,6 +38,14 @@ public class PlayerController : MonoBehaviour
         fire = playerControls.Player.Fire;
         fire.Enable();
         fire.performed += Fire;
+
+        reset = playerControls.UI.Reset;
+        reset.Enable();
+        reset.performed += Reset;
+
+        exit = playerControls.UI.Exit;
+        exit.Enable();
+        reset.performed += Exit;
     }
 
     private void OnDisable() {
@@ -41,6 +56,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -55,12 +71,12 @@ public class PlayerController : MonoBehaviour
     private void Fire(InputAction.CallbackContext context) {
         if(canCast) {
             StartCoroutine(castTimer(shootCooldown));
-            Debug.Log("Player Shot projectile");
 
-            GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector3.right * 2f, Quaternion.identity);
+            GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector3.right * 2f - Vector3.back*0.5f, Quaternion.identity);
 
             Projectile projectile = projectileObject.GetComponent<Projectile>();
             projectile.Launch(2000);
+            audioSource.PlayOneShot(FireSound);
         }
     }
 
@@ -78,6 +94,14 @@ public class PlayerController : MonoBehaviour
         if(health == 0){
             gameObject.SetActive(false);
         }
+    }
+
+    private void Reset(InputAction.CallbackContext context) {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void Exit(InputAction.CallbackContext context) {
+        Application.Quit();
     }
 }
 

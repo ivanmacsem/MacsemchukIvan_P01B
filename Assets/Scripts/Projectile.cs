@@ -29,7 +29,6 @@ public class Projectile : MonoBehaviour
         EnemyController e = other.collider.GetComponent<EnemyController>();
         if (e != null)
         {
-            Debug.Log("Enemy Hit!");
             e.TakeDamage(10);
         }
         Destroy(gameObject);

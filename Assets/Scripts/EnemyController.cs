@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
+    public AudioSource audioSource;
 
     public float health = 500f;
     public float stage1Spd = 6f;
@@ -18,6 +19,12 @@ public class EnemyController : MonoBehaviour
     private bool pointReached = true;
 
     private Vector3 moveDirection;
+
+    public ParticleSystem DmgEffect;
+
+    public AudioClip DmgSound;
+    public ParticleSystem DeathEffect;
+    public AudioClip DeathSound;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -66,7 +73,7 @@ public class EnemyController : MonoBehaviour
             }
             else{
                 rb.velocity = new Vector3(moveDirection.x * stage2Spd, 0, moveDirection.z * stage2Spd);
-                if((rb.position - pointPicked).magnitude<0.5){
+                if((rb.position - pointPicked).magnitude<0.8){
                     pointReached = true;
                 }
             }
@@ -75,7 +82,12 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float dmg){
         health -= dmg;
+        DmgEffect.Play();
+        audioSource.PlayOneShot(DmgSound);
         if(health == 0){
+            DeathEffect.transform.position = rb.position;
+            DeathEffect.Play();
+            audioSource.PlayOneShot(DeathSound);
             gameObject.SetActive(false);
         }
     }
