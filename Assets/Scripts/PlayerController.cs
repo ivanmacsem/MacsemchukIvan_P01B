@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
         exit = playerControls.UI.Exit;
         exit.Enable();
-        reset.performed += Exit;
+        exit.performed += Exit;
     }
 
     private void OnDisable() {
