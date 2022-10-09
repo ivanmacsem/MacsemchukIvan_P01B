@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     Rigidbody rb;
+
+    public GameObject blastDmgEffect;
     
     void Awake()
     {
@@ -30,6 +32,7 @@ public class Projectile : MonoBehaviour
         if (e != null)
         {
             e.TakeDamage(10);
+            GameObject effectObject = Instantiate(blastDmgEffect, rb.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }
