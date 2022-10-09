@@ -35594,6 +35594,7 @@ GameObject:
   - component: {fileID: 148648585}
   - component: {fileID: 148648586}
   - component: {fileID: 148648587}
+  - component: {fileID: 148648588}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -35697,7 +35698,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3836801403516585432, guid: 0d4653ff0f54bb944aa350bba558eee1, type: 3}
   shootCooldown: 1
   FireEffect: {fileID: 1934035775}
-  FireSound: {fileID: 8300000, guid: 586ec8e0fabacbf4c8989df8c2ced007, type: 3}
+  FireSound: {fileID: 8300000, guid: b4781fe1be8c3d64b8a1f9eae2d8b4a4, type: 3}
 --- !u!82 &148648587
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35713,7 +35714,103 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &148648588
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148648581}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0b68718cc1930b94ca829d4f04a5941f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -51882,7 +51979,7 @@ MonoBehaviour:
   curTime: 0
   pointPicked: {x: 0, y: 0, z: 0}
   DmgEffect: {fileID: 1440083038}
-  DmgSound: {fileID: 8300000, guid: 847343161c6609249b86c80587325670, type: 3}
+  DmgSound: {fileID: 8300000, guid: a62ff14710f87364aba3a3d8ebb4d0f0, type: 3}
   DeathEffect: {fileID: 1588614797}
   DeathSound: {fileID: 8300000, guid: f53251bd10e8845418de2701a36786e5, type: 3}
 --- !u!65 &1840420929
