@@ -1,0 +1,1234 @@
+fileFormatVersion: 2
+guid: 1da4431c327f9644f8a1bad11135d34e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 231
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74953518688ab744d928ec53d0977ea3
+      internalID: 1642416281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6994dcf0dde8743a7e12ca82afe74b
+      internalID: 1346919205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36b273d7786d6d428157b68710097bc
+      internalID: 393335300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c6c59b6e646a54d87d3dc7ba36fc86
+      internalID: 585055560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3b90defbebd9146b7270974d0d2e08
+      internalID: -409105327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef041e5d513b49547912f1d379e29c5d
+      internalID: -876684073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6067c1173ea7b1e41b7e06d334d52ad3
+      internalID: 454346715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c595a00f96d07e4dad01ce17d8410ab
+      internalID: -2091657452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e03db959907de4087d99f3722ed319
+      internalID: 1865017121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828aed5438cafbf45bfef0598a280afa
+      internalID: 154252634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c367a47be76af242b5e2ed188f316cc
+      internalID: 364440433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656fcc5fc7ad0a742be96ae6da71638e
+      internalID: 2032570565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb05100674e1a364e8be515d729295c8
+      internalID: -939850262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3003
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da86eceaea7937e49972d2b34ec7be9a
+      internalID: -1922457122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3234
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fb177664ab72a488d702f63dc85881
+      internalID: -1184186412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a847462fd80f243a59ca0cc4b5275a
+      internalID: 1745889520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af5a9de7a5333446bc53460a985cf4f
+      internalID: 308641527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3927
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9571628be467d94a96d80fb3f4c2cd7
+      internalID: -1727210368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd907fb907ffb40428d6f672b7df3f55
+      internalID: 1144962646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 4389
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214b124202cc8b445aefa39f0cc7a860
+      internalID: 1010041083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4620
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afdc152b7272394e904f0b7be7ec312
+      internalID: -1109674365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4851
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedb7995fdc6165498dbce1733492aa3
+      internalID: 814167384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 5082
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28febe145d4a9942ac8bf60c9851a45
+      internalID: -893177271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5313
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371545f79908dc94d846a1c927acd5c6
+      internalID: 580041037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9208a0e48b77fba478c6d867d5006835
+      internalID: 232261035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 5775
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa0bc6baa0e72e43aa18f4811850e81
+      internalID: 667969236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 6006
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578668b2a401b9f4999e1bc822d1a93f
+      internalID: -1600810868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248bf5d8f6c836f48a55d14a1c33403b
+      internalID: -1956753020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 6468
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969acbe2bee227d4d92ab8b1aea3faf7
+      internalID: -1061763563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 6699
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc3768a362080541a332eda7c4407ca
+      internalID: -89195907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 6930
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df22cc338cbfbd34ca2cca4f3ed8c34a
+      internalID: 446629854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 7161
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ed3203ddda9214190e5fb65d9560fa
+      internalID: -1155755332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 7392
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e806b681b6d59e4aa33222344eebdd1
+      internalID: 203181410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 7623
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9245d5803a4504da25967557ebb870
+      internalID: 38908820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 7854
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b7665a0814e1b45aa69975d7fba023
+      internalID: -1503893818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 8085
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfebf2cee21de3449a714d9c2e4db4d
+      internalID: -869854502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 8316
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbca55a968aef249bb7e2cc3653de82
+      internalID: -311922474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 8547
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c61e83b2e0e4ad419796cf18a004a80
+      internalID: -473154760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 8778
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77043aceb5678f944baab5b968711807
+      internalID: -269420974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 9009
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f338f398b819f418d2ca7fca9d8356
+      internalID: -335730949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 9240
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dc7df5d20770d4aaeaa9224218f53c
+      internalID: -92113042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 9471
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97837feea93bb74d87fb2ddff4e9421
+      internalID: -1745116335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 9702
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b11851d7cb4e5489c33d18a0ece188
+      internalID: 1975396946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 9933
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd3ed0599d2934479827cb694b257fd
+      internalID: 442296083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 10164
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d22c53dff252e4186af339bfaaace1
+      internalID: 2144356262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 10395
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd840afdaad38f4dbdba59734d4c3f9
+      internalID: 74988802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 10626
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bef51f85971bb46b3ebfbf12c4df16
+      internalID: -1155027627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 10857
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46496a5dbc7df5a498c8d655e404b985
+      internalID: -2074544932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 11088
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d735b9b9ccd572048b5250254c3950b9
+      internalID: 1025376337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_healthbar-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 11319
+        y: 0
+        width: 231
+        height: 81
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb20ade92f017c64abb61ee13dee6d6d
+      internalID: 1383812056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss_healthbar-Sheet_24: 232261035
+      boss_healthbar-Sheet_46: -1155027627
+      boss_healthbar-Sheet_9: 154252634
+      boss_healthbar-Sheet_10: 364440433
+      boss_healthbar-Sheet_15: 1745889520
+      boss_healthbar-Sheet_36: -311922474
+      boss_healthbar-Sheet_14: -1184186412
+      boss_healthbar-Sheet_39: -335730949
+      boss_healthbar-Sheet_35: -869854502
+      boss_healthbar-Sheet_30: 446629854
+      boss_healthbar-Sheet_28: -1061763563
+      boss_healthbar-Sheet_33: 38908820
+      boss_healthbar-Sheet_43: 442296083
+      boss_healthbar-Sheet_21: 814167384
+      boss_healthbar-Sheet_3: 585055560
+      boss_healthbar-Sheet_16: 308641527
+      boss_healthbar-Sheet_29: -89195907
+      boss_healthbar-Sheet_38: -269420974
+      boss_healthbar-Sheet_44: 2144356262
+      boss_healthbar-Sheet_1: 1346919205
+      boss_healthbar-Sheet_37: -473154760
+      boss_healthbar-Sheet_12: -939850262
+      boss_healthbar-Sheet_17: -1727210368
+      boss_healthbar-Sheet_20: -1109674365
+      boss_healthbar-Sheet_4: -409105327
+      boss_healthbar-Sheet_27: -1956753020
+      boss_healthbar-Sheet_45: 74988802
+      boss_healthbar-Sheet_23: 580041037
+      boss_healthbar-Sheet_2: 393335300
+      boss_healthbar-Sheet_6: 454346715
+      boss_healthbar-Sheet_19: 1010041083
+      boss_healthbar-Sheet_0: 1642416281
+      boss_healthbar-Sheet_25: 667969236
+      boss_healthbar-Sheet_41: -1745116335
+      boss_healthbar-Sheet_7: -2091657452
+      boss_healthbar-Sheet_8: 1865017121
+      boss_healthbar-Sheet_32: 203181410
+      boss_healthbar-Sheet_5: -876684073
+      boss_healthbar-Sheet_42: 1975396946
+      boss_healthbar-Sheet_11: 2032570565
+      boss_healthbar-Sheet_18: 1144962646
+      boss_healthbar-Sheet_49: 1383812056
+      boss_healthbar-Sheet_31: -1155755332
+      boss_healthbar-Sheet_22: -893177271
+      boss_healthbar-Sheet_47: -2074544932
+      boss_healthbar-Sheet_13: -1922457122
+      boss_healthbar-Sheet_26: -1600810868
+      boss_healthbar-Sheet_40: -92113042
+      boss_healthbar-Sheet_48: 1025376337
+      boss_healthbar-Sheet_34: -1503893818
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
