@@ -34,17 +34,17 @@ public class EnemyController : MonoBehaviour
     {
         if(health > 200){           //stage 1
             curTime += Time.deltaTime;
-            curTime %= 10;
-            if(curTime<4){
+            curTime %= 18;
+            if(curTime<8){
                 basicMoveStage=0;
             }
-            else if(curTime<5){
+            else if(curTime<9){
                 basicMoveStage=1;
             }
-            else if(curTime<9){
+            else if(curTime<17){
                 basicMoveStage=2;
             }
-            else if(curTime<10){
+            else if(curTime<18){
                 basicMoveStage=3;
             }
 
@@ -67,7 +67,7 @@ public class EnemyController : MonoBehaviour
         }
         else{           //stage 2
             if(pointReached){
-                pointPicked = new Vector3(Random.Range(13.48f, 19.48f), 0, Random.Range(-11.63f, 12.25f));
+                pointPicked = new Vector3(Random.Range(13.48f, 19.48f), 0, Random.Range(-23.6f, 24.2f));
                 moveDirection = (pointPicked - rb.position).normalized;
                 pointReached = false;
             }

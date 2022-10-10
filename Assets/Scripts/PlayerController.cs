@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDirection = move.ReadValue<Vector3>();
-        rb.position = new Vector3(Mathf.Clamp(rb.position.x, 0, 6.66f), rb.position.y, Mathf.Clamp(rb.position.z, -16.66f, 16.66f));
+        rb.position = new Vector3(Mathf.Clamp(rb.position.x, 0, 6.66f), rb.position.y, Mathf.Clamp(rb.position.z, -24f, 24f));
     }
 
     private void FixedUpdate() {
