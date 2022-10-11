@@ -7,6 +7,7 @@ public class Motherling : MonoBehaviour
     private Rigidbody rb;
     public AudioSource audioSource;
     public BossBeam beam;
+    public BossHealth bossHealth;
     private bool canCast = true;
     public AudioClip DmgSound;
     public GameObject DeathEffect;
@@ -15,6 +16,7 @@ public class Motherling : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        bossHealth.Killed += Kill;
     }
     void Update()
     {
