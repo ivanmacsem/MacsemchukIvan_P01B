@@ -9,10 +9,6 @@ public class BossHealth : MonoBehaviour
     public event Action Damaged = delegate { };
     public event Action StartStageTwo = delegate { };
     public event Action Killed = delegate { };
-    // Start is called before the first frame update
-    public int getHealth(){
-        return health;
-    }
     public void TakeDamage(){
         health -= 10;
         Damaged.Invoke();

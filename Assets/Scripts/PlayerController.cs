@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioSource;
     public float moveSpd = 6f;
 
-    public float health = 100f;
+    public PlayerHealth health;
     public InputActions playerControls;
     private InputAction move;
     private InputAction fire;
@@ -52,12 +52,17 @@ public class PlayerController : MonoBehaviour
     private void OnDisable() {
         move.Disable();
         fire.Disable();
+        health.Damaged -= OnTakeDamage;
+        health.Killed -= OnKill;
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        health = GetComponent<PlayerHealth>();
+        health.Damaged += OnTakeDamage;
+        health.Killed += OnKill;
     }
 
     void Update()
@@ -92,11 +97,13 @@ public class PlayerController : MonoBehaviour
         canCast = true;
     }
 
-    public void TakeDamage(float dmg){
-        health -= dmg;
-        if(health == 0){
-            gameObject.SetActive(false);
-        }
+    void OnTakeDamage(float dmg){
+        //damaged animation and sound
+    }
+
+    void OnKill(){
+        //killed animation and sound
+        gameObject.SetActive(false);
     }
 
     private void Reset(InputAction.CallbackContext context) {
