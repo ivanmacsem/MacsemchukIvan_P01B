@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
 
-    public AudioSource audioSource;
+    public AudioManager audioM;
     public float moveSpd = 6f;
 
     public PlayerHealth health;
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private InputAction reset;
     private InputAction exit;
 
+    public shake shakeCam;
+    public Image dmgFlash;
     public GameObject projectilePrefab;
 
     private bool canCast=true;
@@ -26,7 +29,10 @@ public class PlayerController : MonoBehaviour
 
     public float shootCooldown = 0.3f;
     public ParticleSystem FireEffect;
+    public ParticleSystem PlayerDeathEffect;
     public AudioClip FireSound;
+    public AudioClip playerDmg;
+    public AudioClip playerDeath;
 
     private void Awake() {
         playerControls = new InputActions();
@@ -83,7 +89,7 @@ public class PlayerController : MonoBehaviour
             Projectile projectile = projectileObject.GetComponent<Projectile>();
             projectile.Launch(2000);
             FireEffect.Play();
-            audioSource.PlayOneShot(FireSound);
+            audioM.Play(FireSound);
         }
     }
 
@@ -97,11 +103,26 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnTakeDamage(float dmg){
-        //damaged animation and sound
+        audioM.Play(playerDmg);
+        shakeCam.camShake();
+        StartCoroutine(flashTimer());
+    }
+
+    IEnumerator flashTimer(){
+        float timer = 0.2f;
+        dmgFlash.enabled = true;
+        while(timer > 0){
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+        dmgFlash.enabled = false;
     }
 
     void OnKill(){
-        //killed animation and sound
+        dmgFlash.enabled = false;
+        audioM.Play(playerDeath);
+        PlayerDeathEffect.transform.position = rb.position;
+        PlayerDeathEffect.Play();
         gameObject.SetActive(false);
     }
 

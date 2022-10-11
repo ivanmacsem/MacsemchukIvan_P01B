@@ -15,14 +15,13 @@ public class Motherling : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
         bossHealth.Killed += Kill;
     }
     void Update()
     {
         if(canCast) {
             StartCoroutine(castTimer(beamCooldown));
-            beam.Fire(1f, false);
+            beam.Fire(1.5f, false);
         }
     }
 

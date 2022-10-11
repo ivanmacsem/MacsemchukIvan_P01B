@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
     private Rigidbody rb;
-    public AudioSource audioSource;
+    public AudioManager audioM;
 
     public BossHealth health;
+    public PlayerHealth playerHealth;
     public BossBeam beam;
     private bool stage2 = false;
     public float stage1Spd = 6f;
@@ -28,6 +30,7 @@ public class EnemyController : MonoBehaviour
     public float beamCooldown = 5f;
 
     private bool canCreate = true;
+    private bool gameOver = false;
 
     public float createCooldown = 15f;
 
@@ -38,6 +41,9 @@ public class EnemyController : MonoBehaviour
     public AudioClip DmgSound;
     public ParticleSystem DeathEffect;
     public AudioClip DeathSound;
+    public Image lossText;
+    public Image winText;
+    public Animator exc;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,12 +51,14 @@ public class EnemyController : MonoBehaviour
         health.Damaged += OnTakeDamage;
         health.StartStageTwo += OnStageTwo;
         health.Killed += OnKill;
+        playerHealth.Killed += OnPlayerKill;
     }
 
     void onDisable(){
         health.Damaged -= OnTakeDamage;
         health.StartStageTwo -= OnStageTwo;
         health.Killed -= OnKill;
+        playerHealth.Killed -= OnPlayerKill;
     }
 
     void Update()
@@ -102,9 +110,6 @@ public class EnemyController : MonoBehaviour
             }
             if(canCreate){
                 StartCoroutine(createTimer(createCooldown));
-                Vector3 spawnPoint = new Vector3(13f, 0, Random.Range(-10.6f, 10.2f));
-                GameObject motherlingObject = Instantiate(motherlingPrefab, spawnPoint, Quaternion.identity);
-                motherlingObject.transform.Rotate(0,180,0);
             }
         }
         if(canCast) {
@@ -123,16 +128,32 @@ public class EnemyController : MonoBehaviour
     }
     IEnumerator createTimer(float timer){
         canCreate = false;
+        Vector3 spawnPoint = new Vector3(13f, 0, Random.Range(-10.6f, 10.2f));
+        exc.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector3(-spawnPoint.z*38.25f, -80f, 0f);
+        exc.enabled = true;
+        float temp = timer;
+        while(timer > temp-2){
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+        exc.enabled = false;
+        GameObject motherlingObject = Instantiate(motherlingPrefab, spawnPoint, Quaternion.identity);
+        motherlingObject.GetComponent<Motherling>().bossHealth = health;
+        motherlingObject.GetComponent<Motherling>().audioSource = beam.audioSource;
+        motherlingObject.GetComponent<Motherling>().beam.audioSource = beam.audioSource;
+        motherlingObject.transform.Rotate(0,180,0);
         while(timer > 0){
             yield return null;
             timer -= Time.deltaTime;
         }
-        canCreate = true;
+        if(!gameOver){
+            canCreate = true;
+        }
     }
 
     void OnTakeDamage(){
         DmgEffect.Play();
-        audioSource.PlayOneShot(DmgSound);
+        audioM.Play(DmgSound);
     }
 
     void OnStageTwo(){
@@ -145,7 +166,13 @@ public class EnemyController : MonoBehaviour
     void OnKill(){
         DeathEffect.transform.position = rb.position;
         DeathEffect.Play();
-        audioSource.PlayOneShot(DeathSound);
+        audioM.Play(DeathSound);
+        winText.enabled = true;
         gameObject.SetActive(false);
+    }
+    void OnPlayerKill(){
+        gameOver = true;
+        beam.audioSource.mute = true;
+        lossText.enabled = true;
     }
 }

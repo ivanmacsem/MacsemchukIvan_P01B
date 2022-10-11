@@ -12,7 +12,7 @@ public class BossHealth : MonoBehaviour
     public void TakeDamage(){
         health -= 10;
         Damaged.Invoke();
-        if(health == 200){
+        if(health == 250){
             StartStageTwo.Invoke();
         }
         if(health <= 0){

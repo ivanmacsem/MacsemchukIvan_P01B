@@ -7,6 +7,9 @@ public class BossBeam : MonoBehaviour
     public ParticleSystem chargeUp;
     private ParticleSystem particles;
     private BoxCollider bCollider;
+    public AudioSource audioSource;
+    public AudioClip beamSound;
+    public AudioClip chargeUpSound;
     private bool isBoss; 
 
     void Awake(){
@@ -21,11 +24,13 @@ public class BossBeam : MonoBehaviour
     }
 
     IEnumerator timer(float timer){
+        audioSource.PlayOneShot(chargeUpSound);
         while(timer > 0){
             yield return null;
             timer -= Time.deltaTime;
         }
         particles.Play();
+        audioSource.PlayOneShot(beamSound);
         bCollider.enabled = true;
         timer = 1f;
         while(timer > 0){
