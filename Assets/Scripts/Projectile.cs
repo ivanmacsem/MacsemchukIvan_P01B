@@ -43,5 +43,6 @@ public class Projectile : MonoBehaviour
             e.Kill();
             GameObject effectObject = Instantiate(blastDmgEffect, rb.position, Quaternion.identity);
         }
+        Destroy(gameObject);
     }
 }

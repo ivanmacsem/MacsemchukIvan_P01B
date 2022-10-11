@@ -9,7 +9,7 @@ public class Motherling : MonoBehaviour
     public BossBeam beam;
     private bool canCast = true;
     public AudioClip DmgSound;
-    public ParticleSystem DeathEffect;
+    public GameObject DeathEffect;
     public float beamCooldown = 5f;
     void Start()
     {
@@ -20,7 +20,7 @@ public class Motherling : MonoBehaviour
     {
         if(canCast) {
             StartCoroutine(castTimer(beamCooldown));
-            beam.Fire(1f);
+            beam.Fire(1f, false);
         }
     }
 
@@ -34,7 +34,8 @@ public class Motherling : MonoBehaviour
     }
 
     public void Kill(){
-        DeathEffect.Play();
+        GameObject deathEff = Instantiate(DeathEffect, rb.position, Quaternion.identity);
+        deathEff.GetComponent<ParticleSystem>().Play();
         audioSource.PlayOneShot(DmgSound);
         gameObject.SetActive(false);
     }

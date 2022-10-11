@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     public float stage2Spd = 3f;
     private int basicMoveStage = 0;
     public float curTime = 0f;
+    public GameObject[] arms;
 
     public Vector3 pointPicked;
 
@@ -101,14 +102,14 @@ public class EnemyController : MonoBehaviour
             }
             if(canCreate){
                 StartCoroutine(createTimer(createCooldown));
-                Vector3 spawnPoint = new Vector3(Random.Range(13.48f, 19.48f), 6.08f, Random.Range(-10.6f, 10.2f));
+                Vector3 spawnPoint = new Vector3(13f, 0, Random.Range(-10.6f, 10.2f));
                 GameObject motherlingObject = Instantiate(motherlingPrefab, spawnPoint, Quaternion.identity);
                 motherlingObject.transform.Rotate(0,180,0);
             }
         }
         if(canCast) {
             StartCoroutine(castTimer(beamCooldown));
-            beam.Fire(1.5f);
+            beam.Fire(1.5f, true);
         }
     }
 
@@ -136,6 +137,9 @@ public class EnemyController : MonoBehaviour
 
     void OnStageTwo(){
         stage2 = true;
+        foreach(GameObject g in arms){
+            g.SetActive(false);
+        }
     }
 
     void OnKill(){

@@ -5403,7 +5403,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d80891231e35c840a2596886b32a22c, type: 2}
+  - {fileID: 2100000, guid: acf2641daf823d547b7811fa4d1b2281, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10399,7 +10399,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   beam: {fileID: 2145538162556929421}
   DmgSound: {fileID: 8300000, guid: a62ff14710f87364aba3a3d8ebb4d0f0, type: 3}
-  DeathEffect: {fileID: 4577268868844980776}
+  DeathEffect: {fileID: 4724831735131114371}
   beamCooldown: 5
 --- !u!65 &778757074462698162
 BoxCollider:
@@ -10412,8 +10412,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7802624, y: 3.3279538, z: 1.6178905}
-  m_Center: {x: 0.25282612, y: -1.1639769, z: -0.023422401}
+  m_Size: {x: 0.7802624, y: 0.8362037, z: 1.6178905}
+  m_Center: {x: 0.25282612, y: 0.08189678, z: -0.023422401}
 --- !u!82 &6532747482323392312
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11556,8 +11556,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.99999976, y: 68.6866, z: 0.444756}
-  m_Center: {x: 0, y: -33.84331, z: 0.040329486}
+  m_Size: {x: 0.99999976, y: 3.7088885, z: 0.444756}
+  m_Center: {x: 0, y: -1.3544532, z: 0.040329486}
 --- !u!198 &39260004339865722
 ParticleSystem:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public float moveSpd = 6f;
 
     public PlayerHealth health;
@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
         health = GetComponent<PlayerHealth>();
         health.Damaged += OnTakeDamage;
         health.Killed += OnKill;
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDirection = move.ReadValue<Vector3>();
-        rb.position = new Vector3(Mathf.Clamp(rb.position.x, 0, 6.66f), rb.position.y, Mathf.Clamp(rb.position.z, -24f, 24f));
+        rb.position = new Vector3(Mathf.Clamp(rb.position.x, 0, 5.7f), rb.position.y, Mathf.Clamp(rb.position.z, -24f, 24f));
     }
 
     private void FixedUpdate() {
