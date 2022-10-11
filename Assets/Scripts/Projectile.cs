@@ -36,4 +36,12 @@ public class Projectile : MonoBehaviour
         }
         Destroy(gameObject);
     }
+    void OnTriggerEnter(Collider other){
+        Motherling e = other.GetComponent<Motherling>();
+        if (e != null)
+        {
+            e.Kill();
+            GameObject effectObject = Instantiate(blastDmgEffect, rb.position, Quaternion.identity);
+        }
+    }
 }

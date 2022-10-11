@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public AudioSource audioSource;
 
     public BossHealth health;
+    public BossBeam beam;
     private bool stage2 = false;
     public float stage1Spd = 6f;
 
@@ -20,6 +21,16 @@ public class EnemyController : MonoBehaviour
     private bool pointReached = true;
 
     private Vector3 moveDirection;
+
+    private bool canCast = true;
+
+    public float beamCooldown = 5f;
+
+    private bool canCreate = true;
+
+    public float createCooldown = 15f;
+
+    public GameObject motherlingPrefab;
 
     public ParticleSystem DmgEffect;
 
@@ -88,7 +99,34 @@ public class EnemyController : MonoBehaviour
                     pointReached = true;
                 }
             }
+            if(canCreate){
+                StartCoroutine(createTimer(createCooldown));
+                Vector3 spawnPoint = new Vector3(Random.Range(13.48f, 19.48f), 6.08f, Random.Range(-10.6f, 10.2f));
+                GameObject motherlingObject = Instantiate(motherlingPrefab, spawnPoint, Quaternion.identity);
+                motherlingObject.transform.Rotate(0,180,0);
+            }
         }
+        if(canCast) {
+            StartCoroutine(castTimer(beamCooldown));
+            beam.Fire(1.5f);
+        }
+    }
+
+    IEnumerator castTimer(float timer){
+        canCast = false;
+        while(timer > 0){
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+        canCast = true;
+    }
+    IEnumerator createTimer(float timer){
+        canCreate = false;
+        while(timer > 0){
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+        canCreate = true;
     }
 
     void OnTakeDamage(){
