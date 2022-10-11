@@ -28,10 +28,10 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        EnemyController e = other.collider.GetComponent<EnemyController>();
+        BossHealth e = other.collider.GetComponent<BossHealth>();
         if (e != null)
         {
-            e.TakeDamage(10);
+            e.TakeDamage();
             GameObject effectObject = Instantiate(blastDmgEffect, rb.position, Quaternion.identity);
         }
         Destroy(gameObject);

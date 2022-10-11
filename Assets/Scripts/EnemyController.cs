@@ -7,7 +7,8 @@ public class EnemyController : MonoBehaviour
     private Rigidbody rb;
     public AudioSource audioSource;
 
-    public float health = 500f;
+    public BossHealth health;
+    private bool stage2 = false;
     public float stage1Spd = 6f;
 
     public float stage2Spd = 3f;
@@ -28,11 +29,21 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        health = GetComponent<BossHealth>();
+        health.Damaged += OnTakeDamage;
+        health.StartStageTwo += OnStageTwo;
+        health.Killed += OnKill;
+    }
+
+    void onDisable(){
+        health.Damaged -= OnTakeDamage;
+        health.StartStageTwo -= OnStageTwo;
+        health.Killed -= OnKill;
     }
 
     void Update()
     {
-        if(health > 200){           //stage 1
+        if(!stage2){           //stage 1
             curTime += Time.deltaTime;
             curTime %= 18;
             if(curTime<8){
@@ -80,15 +91,19 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg){
-        health -= dmg;
+    void OnTakeDamage(){
         DmgEffect.Play();
         audioSource.PlayOneShot(DmgSound);
-        if(health == 0){
-            DeathEffect.transform.position = rb.position;
-            DeathEffect.Play();
-            audioSource.PlayOneShot(DeathSound);
-            gameObject.SetActive(false);
-        }
+    }
+
+    void OnStageTwo(){
+        stage2 = true;
+    }
+
+    void OnKill(){
+        DeathEffect.transform.position = rb.position;
+        DeathEffect.Play();
+        audioSource.PlayOneShot(DeathSound);
+        gameObject.SetActive(false);
     }
 }
