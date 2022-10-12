@@ -168,13 +168,13 @@ public class EnemyController : MonoBehaviour
         DeathEffect.Play();
         audioM.Play(DeathSound);
         winText.enabled = true;
-        exc.enabled = false;
+        exc.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
     void OnPlayerKill(){
         gameOver = true;
         beam.audioSource.mute = true;
         lossText.enabled = true;
-        exc.enabled = false;
+        exc.gameObject.SetActive(false);
     }
 }
